@@ -66,12 +66,14 @@ plot(x= westafrica.data$X..Microscopy..Positive,
      abline(0,1,lty=2, col='red'))
 
 #Task 4 - Generate a box-plot for the prevalence ratio by global regions
+par(mar = c(5, 5, 4, 2) + 0.1)
 boxplot(PrevalenceRatio~Global.Region,data=malaria.dt,
-        xlab='Global Region',
-        ylab='Prevalence Ratio (PCR%/Microscopy%)',
+        xlab ='Global Region',
+        ylab ='Prevalence Ratio (PCR%/Microscopy%)',
         main= 'Prevalence Ratio of Malaria by Global Region',
         col='lightgreen',
-        las=1 )
+        las=1,
+        boxwex=0.5)
 
 
 
