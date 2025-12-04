@@ -1,7 +1,7 @@
 #malariadetector
 #loading the dataset into the work environment
 read.delim2('https://raw.githubusercontent.com/HackBio-Internship/public_datasets/main/R/lancet_malaria.txt')
-#assigning the data table to ta variable 'malaria.dt'
+#assigning the data table to the variable 'malaria.dt'
 malaria.dt <- read.delim2('https://raw.githubusercontent.com/HackBio-Internship/public_datasets/main/R/lancet_malaria.txt')
 #understanding the dataset
 View(malaria.dt)
