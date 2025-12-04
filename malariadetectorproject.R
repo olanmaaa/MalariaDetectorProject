@@ -26,8 +26,7 @@ colnames(malaria.dt)
 malaria.dt <-cbind(malaria.dt[,1:13], PrevalenceRatio, malaria.dt[,14:21])
 
 #Task 3 - create a split plot window detailing the PCR% against Microscopy% for the different regions captured in the dataset
-par(mar = c(2, 2, 2, 1))  # Bottom, left, top, right (default is c(5.1,4.1,4.1,2.1))
-# Your plots here
+par(mar = c(2, 2, 2, 1))
 par(mfrow=c(2,2))
 #plot 1 - Asia & Oceania
 asia.data <- malaria.dt[malaria.dt$Global.Region == 'Asia&Oceania',]
