@@ -22,5 +22,10 @@ plot(x=malaria.dt$X..PCR..Positive,
 PrevalenceRatio <- malaria.dt$X..Microscopy..Positive / malaria.dt$X..PCR..Positive
 #adding PrevlanceRatio to the dataset
 colnames(malaria.dt)
+#adding PrevalenceRatio immediately after the percentage of positive Microscopy samples
+malaria.dt <-cbind(malaria.dt[,1:13], PrevalenceRatio, malaria.dt[,14:21])
+
+
+
 
 
