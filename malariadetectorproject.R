@@ -20,9 +20,8 @@ plot(x=malaria.dt$X..Microscopy..Positive,
 
 #Task2 - calculate the prevalence ratio (no. of positive microscopy cases by no. of positive PCR cases)
 PrevalenceRatio <- malaria.dt$X..Microscopy..Positive / malaria.dt$X..PCR..Positive
-#PrevlanceRatio to the dataset
-colnames(malaria.dt)
 #adding PrevalenceRatio immediately after the percentage of positive Microscopy samples
+colnames(malaria.dt)
 malaria.dt <-cbind(malaria.dt[,1:13], PrevalenceRatio, malaria.dt[,14:21])
 
 #Task 3 - create a split plot window detailing the PCR% against Microscopy% for the different regions captured in the dataset
