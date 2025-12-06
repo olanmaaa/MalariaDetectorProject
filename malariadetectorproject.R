@@ -25,7 +25,7 @@ colnames(malaria.dt)
 malaria.dt <-cbind(malaria.dt[,1:13], PrevalenceRatio, malaria.dt[,14:21])
 
 #Task 3 - create a split plot window detailing the PCR% against Microscopy% for the different regions captured in the dataset
-par(mar = c(2, 2, 2, 1))
+par(mar = c(4, 4, 2, 1))
 par(mfrow=c(2,2))
 #plot 1 - Asia & Oceania
 asia.data <- malaria.dt[malaria.dt$Global.Region == 'Asia&Oceania',]
@@ -65,8 +65,8 @@ plot(x= westafrica.data$X..Microscopy..Positive,
      abline(0,1,lty=2, col='red'))
 
 #Task 4 - Generate a box-plot for the prevalence ratio by global regions
-par(mar = c(5, 5, 4, 2) + 0.1)
-boxplot(PrevalenceRatio~Global.Region,data=malaria.dt,
+par(mar = c(5, 4, 4, 2) + 0.1)
+boxplot(PrevalenceRatio ~ Global.Region, data=malaria.dt,
         xlab ='Global Region',
         ylab ='Prevalence Ratio (PCR%/Microscopy%)',
         main= 'Prevalence Ratio of Malaria by Global Region',
